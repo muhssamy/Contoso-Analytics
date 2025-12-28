@@ -57,8 +57,8 @@ Before you begin, ensure you have:
 ## 📥 Step 2: Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-name>
+git clone https://github.com/muhssamy/Contoso-Analytics.git
+cd Contoso-Analytics
 ```
 
 ---
