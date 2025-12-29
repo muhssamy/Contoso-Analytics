@@ -159,31 +159,31 @@ CREATE TABLE sales (
 
 -- IMPORTANT: Update the path to match your directory
 -- Use forward slashes (/) even on Windows
--- Example: 'C:/Users/azzam.ma/Downloads/csv-10m/date.csv'
+-- Example: 'date.csv'
 
 \echo 'Loading date dimension...'
-\COPY date FROM 'C:/Users/azzam.ma/Downloads/csv-10m/date.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY date FROM 'date.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \echo 'Loading currency exchange...'
-\COPY currencyexchange FROM 'C:/Users/azzam.ma/Downloads/csv-10m/currencyexchange.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY currencyexchange FROM 'currencyexchange.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \echo 'Loading store dimension...'
-\COPY store FROM 'C:/Users/azzam.ma/Downloads/csv-10m/store.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8', NULL '');
+\COPY store FROM 'store.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8', NULL '');
 
 \echo 'Loading product dimension...'
-\COPY product FROM 'C:/Users/azzam.ma/Downloads/csv-10m/product.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY product FROM 'product.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \echo 'Loading customer dimension (this may take a few minutes)...'
-\COPY customer FROM 'C:/Users/azzam.ma/Downloads/csv-10m/customer.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY customer FROM 'customer.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \echo 'Loading orders fact table (this may take a few minutes)...'
-\COPY orders FROM 'C:/Users/azzam.ma/Downloads/csv-10m/orders.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY orders FROM 'orders.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \echo 'Loading order rows fact table (this may take several minutes)...'
-\COPY orderrows FROM 'C:/Users/azzam.ma/Downloads/csv-10m/orderrows.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY orderrows FROM 'orderrows.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 \echo 'Loading sales fact table (this may take 5-10 minutes)...'
-\COPY sales FROM 'C:/Users/azzam.ma/Downloads/csv-10m/sales.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
+\COPY sales FROM 'sales.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 -- ============================================================================
 -- Step 5: Create Indexes for Performance
