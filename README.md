@@ -37,7 +37,7 @@ Before you begin, ensure you have:
 
 1. **Add to PATH** (if installed via Homebrew)
    ```bash
-   echo 'export PATH="/usr/local/opt/postgresql/bin:$PATH"' >> ~/.zshrc
+   echo 'export PATH="/Library/PostgreSQL/18/bin:$PATH"' >> ~/.zshrc
    source ~/.zshrc
    ```
 
